@@ -2,8 +2,27 @@ require './lib/ahorcado.rb'
 
 describe Ahorcado do
 
-	it "validar que la letra no existe" do
-		pf = Ahorcado.new
-		expect(pf.valido "X").to eq false
+	it "si palabra es HOLA, debe darme  _ _ _ _" do
+		obj= Ahorcado.new "HOLA"
+		expect(obj.avance).to eq "_ _ _ _ "
+	end
+
+	it "si palabra es HOLA, y valido H debe darme  H _ _ _" do
+		obj= Ahorcado.new "HOLA"
+		obj.valido "H"
+		expect(obj.avance).to eq "H _ _ _ "
+	end
+
+	it "si palabra es HOLA, y valido L debe darme  _ _ L _" do
+		obj= Ahorcado.new "HOLA"
+		obj.valido "L"
+		expect(obj.avance).to eq "_ _ L _ "
+	end
+
+	it "si palabra es HOLA, y valido L y A debe darme  _ _ L A" do
+		obj= Ahorcado.new "HOLA"
+		obj.valido "L"
+		obj.valido "A"
+		expect(obj.avance).to eq "_ _ L A "
 	end
 end

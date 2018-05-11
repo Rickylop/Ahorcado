@@ -5,19 +5,38 @@
 <head>
 	<title></title>
 </head>
+<center>
 <body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
 	<h1>"Juguemos!!!"</h1>
 	<h1> <%= session['mensaje'] %> </h1>
 	<h2> <%= session['reto']%> </h2>
-	<form action="/validar" method="post">
-		<input type="texto" name="intento">
+	
+	
+	<h2> <%= session['prueba']%> </h2>
+	<input type="texto" name="l1" value=" " size="1" maxlength="1" disabled>
+	<input type="texto" name="l2" size="1" maxlength="1" disabled>
+	<input type="texto" name="l3" size="1" maxlength="1" disabled>
+	<input type="texto" name="l4" size="1" maxlength="1" disabled>
+	<input type="texto" name="l5" size="1" maxlength="1" disabled>
+	<hr width:300px>
+
+	
+	<form action="/configurar" method="post">
+		<input type="texto" name="intento" size="1" maxlength="1">
 		<input type="submit" value="Adivinar">
 
 	</form>
-	<h1>_  _  _  _  _</h1>
-	<h1>Recuerda que tienes hasta 5 intentos fallidos</h1>
+	
+	<!--<h1>Recuerda que tienes hasta 5 intentos fallidos</h1>-->
 	<h2> <%= session['resultado']%> </h2>
 
 	<h2> <%= session['historico']%> </h2>
-</body>
+</body></center>
 </html>

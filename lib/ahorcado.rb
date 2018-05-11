@@ -1,19 +1,23 @@
 class Ahorcado
 
-	def initialize 
-			@palabra1b = ["L", "I", "B", "R", "O"]
+
+	def initialize secreto
+		@palabra1b = secreto.split("")
+		@avance = "_ " * @palabra1b.size 
 	end
 	
 	
     def valido letra
-    	puts @palabra1b
-		if @palabra1b.index(letra) == nil 
-			false
-		else 
-			true
-		end
-			
-	   
+    	index = @palabra1b.index(letra)
+    	if index != nil
+    		@avance[index*2] = letra
+    	else
+    		@avance
+    	end
+	end
+
+	def avance
+		@avance
 	end
 
 end
