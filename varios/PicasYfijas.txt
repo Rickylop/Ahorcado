@@ -1,0 +1,42 @@
+#PicasYfijas.rb
+
+class PicasYfijas
+
+	def initialize numeroSecreto
+		@numeroSecreto = numeroSecreto
+	end
+
+	def valido?
+		return (@numeroSecreto.to_i >0 and @numeroSecreto.split("").uniq.size == 4)
+		
+	end
+
+	def validarIntento numeroAJugar
+		intentoArray = numeroAJugar.to_s.split("")
+		nsArray = @numeroSecreto.to_s.split("")
+
+		picas = 0
+		fijas = 0
+
+		#return nsArray.include? intentoArray[0]
+		indice = 0
+		intentoArray.each do |num|
+
+
+			if nsArray.index(num) == nil
+
+			elsif nsArray.index(num) == indice
+				fijas = fijas + 1
+			elsif (nsArray.index(num) >= 0)
+				picas = picas + 1
+			end
+
+			indice = indice + 1
+
+		end
+
+		numeroAJugar + " " + fijas.to_s + "F " + picas.to_s + "P"
+
+	end
+
+end
