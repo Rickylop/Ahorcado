@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Bienvenido a Picas y Fijas</h1>
+	<form action="/configurar" method="post">
+		<input type="password" name="numeroSecreto">
+		<input type="submit" value="Jugar">
+	</form>
+</body>
+</html>

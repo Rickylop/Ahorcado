@@ -1,0 +1,19 @@
+<!--Juego.erb-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> <%= session['mensaje'] %> </h1>
+	<h2> <%= session['reto']%> </h2>
+	<form action="/validar" method="post">
+		<input type="texto" name="intento">
+		<input type="submit" value="Adivinar">
+	</form>
+	<h2> <%= session['resultado']%> </h2>
+
+	<h2> <%= session['historico']%> </h2>
+</body>
+</html>
