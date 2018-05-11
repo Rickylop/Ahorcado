@@ -1,14 +1,19 @@
 class Ahorcado
 
 	def initialize 
+			@palabra1b = ["L", "I", "B", "R", "O"]
 	end
-
+	
+	
     def valido letra
-    	false
-    end
-
-
-
-	palabra1b = ["C", "A", "R", "R", "O"]
+    	puts @palabra1b
+		if @palabra1b.index(letra) == nil 
+			false
+		else 
+			true
+		end
+			
+	   
+	end
 
 end
