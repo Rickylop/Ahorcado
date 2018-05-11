@@ -1,5 +1,6 @@
 require 'sinatra'
 require './config'
+require './lib/ahorcado.rb'
 
 get '/' do
 
@@ -17,3 +18,14 @@ post '/configurar' do
 	#	session['mensaje']= "Numero no valido, intenta de nuevo"	
 	#end
 end
+
+
+post '/validar' do
+	session['obj'] = Ahorcado.new 
+	session['resultado'] = "No existe"#session['obj'].validar params['intento']
+
+
+
+	erb(:juego)
+end
+
