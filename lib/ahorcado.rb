@@ -1,9 +1,13 @@
 class Ahorcado
 
-	def initialize letra = "B"
-		#@letra = letra
-		true
+	def initialize 
 	end
+
+    def valido letra
+    	false
+    end
+
+
 
 	palabra1b = ["C", "A", "R", "R", "O"]
 
