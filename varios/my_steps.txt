@@ -1,0 +1,28 @@
+Given(/^que abro el juego$/) do
+  visit '/'
+end
+
+Then(/^debo ver "([^"]*)"$/) do |text|
+  expect(page.body).to match /#{text}/m 
+end
+
+
+When(/^proveo "([^"]*)" como numero secreto$/) do |numero|
+	fill_in("numeroSecreto", :with => numero)
+end
+
+When(/^inicio el juego$/) do
+    click_button("Jugar")
+end
+
+Dado(/^que ya empezo un juego con el numero "([^"]*)"$/) do |numero|
+	step 'que abro el juego'
+	step 'proveo "'+numero+'" como numero secreto'
+	step 'inicio el juego'
+end
+
+Cuando(/^ingrese "([^"]*)" Como numero a adivinar$/) do |opcion|
+	fill_in("intento", :with => opcion)
+	click_button("Adivinar")
+end
+
