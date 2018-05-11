@@ -1,0 +1,18 @@
+class Ahorcado
+
+	def initialize secreto
+		@palabra1b = secreto.split("")
+		@avance = "_ " * @palabra1b.size 
+	end
+	
+	
+    def valido letra
+    	index = @palabra1b.index(letra)
+    	@avance[index*2] = letra
+	end
+
+	def avance
+		@avance
+	end
+
+end
