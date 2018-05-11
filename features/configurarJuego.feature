@@ -12,7 +12,11 @@ Scenario: Debo poder inic¡ar el juego
 		When doy clic en el boton jugar
 		Then debo ver "Juguemos!!!"
 
-
+Scenario: Debo poder ingresar una letra
+		Given que abro el juego
+		When doy clic en el boton jugar
+		Then debo ver "Juguemos!!!"
+		And debo ver "No Existe"
 #Scenario: El numero secreto no debe tener digitos repetidos
 #		Given que abro el juego  
 #		When proveo "1111" como numero secreto
