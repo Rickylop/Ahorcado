@@ -1,29 +1,26 @@
 # features/configurarJuego.feature
 Feature:
-	como jugador oponente quiero configurar un numero secreto para que mi rival trate de adivinarlo
+	como jugador de RubyAhorcado deseo cargar el juego
 
 
 Scenario: El juego debe tener un titulo de bienvenida 
 		Given que abro el juego  
-		Then debo ver "Bienvenido a Picas y Fijas"
+		Then debo ver "Bienvenido a RubyAhorcado"
 
-Scenario: Debo poder configurar un numero secreto (no visible)
+Scenario: Debo poder inic¡ar el juego
 		Given que abro el juego  
-		When proveo "5678" como numero secreto
-		And inicio el juego
-		Then debo ver "El numero esta configurado"
-		And debo ver "Estas listo para adivinar?"
+		When doy clic en el boton jugar
+		Then debo ver "Juguemos!!!"
 
 
-Scenario: El numero secreto no debe tener digitos repetidos
-		Given que abro el juego  
-		When proveo "1111" como numero secreto
-		And inicio el juego
-		Then debo ver "Numero no valido, intenta de nuevo"
+#Scenario: El numero secreto no debe tener digitos repetidos
+#		Given que abro el juego  
+#		When proveo "1111" como numero secreto
+#		And inicio el juego
+#		Then debo ver "Numero no valido, intenta de nuevo"
 		
 
 
 
-#Se realizan en las pruebas unitarioas
-#Scenario: La longitud del numero secreto debe ser de 4
-#Scenario: El numero secreto no debe ser negativo
+#Se realizan en las pruebas unitarias
+#Scenario: El dato ingresado debe ser letra

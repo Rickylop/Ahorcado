@@ -8,7 +8,7 @@ end
 
 
 post '/configurar' do
-	"Vamos a Jugar"
+	
 	erb(:juego)
 	#session['numeroSecreto']= params['numeroSecreto']
 	#if session['numeroSecreto'].split("").uniq.size == 4  
