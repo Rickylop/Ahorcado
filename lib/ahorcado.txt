@@ -8,11 +8,17 @@ class Ahorcado
 	
     def valido letra
     	index = @palabra1b.index(letra)
-    	@avance[index*2] = letra
+    	
+    	if index != nil
+    		@avance[index*2] = letra
+    	else
+    		@avance
+    	end
 	end
 
 	def avance
 		@avance
 	end
+
 
 end
